@@ -165,8 +165,7 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    console.log(questions, targetId, targetOptionIndex, newOption)
-    return questions.map((q: Question): Question => q.id===targetId? ({...q, options:(targetOptionIndex!==-1? [...q.options].splice(targetOptionIndex, 1, newOption) : [...q.options, newOption])}) : q);
+    return questions.map((q: Question): Question => q.id===targetId? ({...q, options:(targetOptionIndex!==-1? [...q.options].map((s: string, i: number): string => i===targetOptionIndex? newOption : s) : [...q.options, newOption])}) : q);
 }
 
 /***
