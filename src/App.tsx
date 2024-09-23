@@ -1,7 +1,13 @@
 import React from "react";
-import "./App.css";
-import kangaroo from "./kangaroo-punch.png";
 import { Button } from "react-bootstrap";
+import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
+import kangaroo from "./kangaroo-punch.png";
 
 function App(): React.JSX.Element {
     return (
@@ -9,15 +15,8 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <h1>
-                This is my example of a header. Note that it is not in the
-                Bootstrap header.
-            </h1>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Zachariah Sollenberger was here!!!
-            </p>
-            <p>Hello World!</p>
+            <h1>Example header.</h1>
+            <p>Example paragraph text. Hello World!</p>
             <img
                 src={kangaroo}
                 alt="Picture of a badass australian punching a kangaroo in the face to protect his dog."
@@ -41,20 +40,22 @@ function App(): React.JSX.Element {
                     </li>
                 </ul>
             </div>
-            <Button
-                onClick={() => {
-                    console.log("Hello World!");
-                }}
-            >
-                Log Hello World
-            </Button>
-            <div
-                style={{
-                    width: "100%",
-                    height: "100px",
-                    backgroundColor: "#FF0000",
-                }}
-            ></div>
+            <div style={{backgroundColor: '#ff0000', width: '100%', height: '50px'}}></div>
+            <hr></hr>
+            <Button onClick={()=>{console.log("Hello World!")}}>Log Hello World</Button>
+            <hr />
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
+            
         </div>
     );
 }
