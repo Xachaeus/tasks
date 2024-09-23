@@ -20,4 +20,3 @@ export interface Question {
     /** Whether or not this question is ready to display to students */
     published: boolean;
 }
-
