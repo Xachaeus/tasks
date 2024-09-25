@@ -8,6 +8,10 @@ import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 import kangaroo from "./kangaroo-punch.png";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): React.JSX.Element {
     return (
@@ -41,6 +45,14 @@ function App(): React.JSX.Element {
                 </ul>
             </div>
             <div style={{backgroundColor: '#ff0000', width: '100%', height: '50px'}}></div>
+            <hr></hr>
+            <DoubleHalf></DoubleHalf>
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
             <hr></hr>
             <Button onClick={()=>{console.log("Hello World!")}}>Log Hello World</Button>
             <hr />
